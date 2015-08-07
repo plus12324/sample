@@ -18,14 +18,9 @@ sourceCompatibility = 1.7
 // 개발한 애플리케이션 버전
 version = '1.0'
 
-/**
- * Eclipse 환경설정.
-
+/* Eclipse 환경설정.
 eclipse {
-    classpath {
-        downloadSources = true
-    }
-
+    classpath {        downloadSources = true    }
     // workspace/{project}/.settings 폴더를 설정한다.
     wtp {
         // .settings 폴더의 org.eclipse.wst.common.component 파일을 설정한다.
@@ -33,7 +28,6 @@ eclipse {
             //contextPath = project.name // 원하는 contextPath 지정. 단, 빈 컨텍스트패스는 "/" 로 지정
             contextPath = "" // 원하는 contextPath 지정. 단, 빈 컨텍스트패스는 "/" 로 지정
         }
-
         // .settings 폴더의 org.eclipse.wst.common.project.facet.core.xml 파일을 설정한다.
         facet {
             facet name: "jst.web" , version: "2.5" // Servlet Spec Version 지정
@@ -41,8 +35,7 @@ eclipse {
             //facet name: "wst.jsdt.web" , version: "1.0"   // Javascript 지정, 1.0
         }
     }
-} 
- */
+}  */
  
 // 메이븐 Central 저장소 사용
 repositories {
