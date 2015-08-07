@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 	@RequestMapping(value = "/home")
-	public void requestReAgree(final HttpServletRequest servletRequest, HttpServletResponse res,ModelMap mMap) {
+	public String requestReAgree(final HttpServletRequest servletRequest, HttpServletResponse res,ModelMap mMap) {
 		
 		
+		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");		
+		String CallbackMsg = "true";		
 		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
 		
-		String CallbackMsg = "true";
 		
-		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
-		mMap.put("view", "home");
+		return "home";
 	}
 }
