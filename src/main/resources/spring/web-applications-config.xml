@@ -16,15 +16,7 @@
                            http://www.springframework.org/schema/util
                            http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	
-	<context:annotation-config />
-	
-	<!-- aspectj 설정 -->
-<!-- 	<context:load-time-weaver aspectj-weaving="on" /> -->
-	
-	<!-- CGLIB 프록시 강제 (비지니스객체가 인터페이스를 구현하지않을경우) -->
-<!-- 	<aop:aspectj-autoproxy proxy-target-class="true" /> -->
-
-
+<!-- 	<context:annotation-config /> -->
 <!-- 	<context:component-scan base-package="com.educar.common.aop" /> -->
 <!-- 	<context:component-scan base-package="egovframework.com"> -->
 <!-- 		<context:include-filter type="regex" expression="(impl)\..*" /> -->
@@ -87,13 +79,11 @@
 	<!-- 2014.07.30 로그인한 사용자의 세션정보를 담아둘 저장소 -->
 <!-- 	<bean id="loginSessionID" class="com.educar.common.interceptor.LoginSessionID" /> -->
 	
-	<!-- 2014.09.12 aspectJ 사용자 정의 -->
-<!-- 	<bean id="newwebAop" class="com.educar.common.aop.NewwebAop" factory-method="aspectOf"/> -->
 
 	<!--  각종 System property 정보를 가진 properties 파일 -->
 <!-- 	<util:properties id="systemProperties" location="classpath:META-INF/property/${spring.profiles.active}/system.properties" /> -->
 
 	<!-- mbean 모니터링용 빈들을 로딩한다. 미사용 시 커멘트 아웃 처리 필요 -->
 <!-- 	<import resource="mbean-config.xml"/> -->
-
+	
 </beans>

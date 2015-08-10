@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.SBM.spring">
+	<logger name="com.gSpring">
 		<level value="info" />
 	</logger>
 	
