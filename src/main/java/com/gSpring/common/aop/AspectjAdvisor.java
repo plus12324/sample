@@ -30,10 +30,10 @@ public class AspectjAdvisor {
  		StopWatch sw = new LoggingStopWatch();
  		try {
  			logger.info("joinPoint.proceed()");
- 			System.out.println("★★★★★★★★★★★★★joinPoint.proceed()_start");
+ 			logger.info("■■■■■■■■■ joinPoint.proceed()_start ■■■■■■■■■");
  			Object result = joinPoint.proceed();
- 			Thread.sleep(2000);
- 			System.out.println("★★★★★★★★★★★★★joinPoint.proceed()_end");
+ 			//Thread.sleep(2000);
+ 			logger.info("■■■■■■■■■ joinPoint.proceed()_end ■■■■■■■■■");
  			return result;
 
  		} finally {
