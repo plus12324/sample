@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -11,9 +12,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gSpring.service.MemberService;
+
 @Controller
 public class MainController {
 	
+	@Autowired
+	private MemberService memberService;
 	private Logger logger = Logger.getLogger(getClass());
 		
 	@RequestMapping(value = "/")
@@ -44,9 +49,12 @@ public class MainController {
 	
 	@RequestMapping(value = "/test1")
 	public ModelAndView test(ModelAndView mv) {
+		
 		mv.addObject("name", "developer");
+		mv.addObject("count", memberService.selectMember());
 		mv.setViewName("test");
-		logger.info("ModelAndView test");		
+		
+		logger.info("ModelAndView test complete!");		
 		return mv;		
 	}
 }

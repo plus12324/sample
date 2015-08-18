@@ -36,8 +36,6 @@
 	</bean>
 	
 	<context:component-scan base-package="com.gSpring.controller" />
-	<context:component-scan base-package="com.gSpring.service" />
-	<context:component-scan base-package="com.gSpring.dao" />
 	
 	<!-- 에듀카 Common Exception Handling Service -->
 	<!-- <bean id="exceptionHandlingService" class="com.educar.admin.service.AdminExceptionResolverService" /> -->

@@ -49,7 +49,7 @@ public class MemberDao {
 	    public List selectList(String queryId){
 	        printQueryId(queryId);
 	        
-	        return sqlSession.selectList(queryId);
+	        return sqlSession.selectList(queryId, "admin");
 	    }
 	     
 	    @SuppressWarnings("rawtypes")
